@@ -16,21 +16,52 @@
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <style>
+
+      /* 初始化CSS */
+      *, *::before, *::after {
+        box-sizing: border-box;
+      }
+      * {
+        margin: 0;
+      }
+      body {
+        line-height: 1.5;
+        -webkit-font-smoothing: antialiased;
+      }
+      img, picture, video, canvas, svg {
+        display: block;
+        max-width: 100%;
+      }
+      input, button, textarea, select {
+        font: inherit;
+      }
+      p, h1, h2, h3, h4, h5, h6 {
+        overflow-wrap: break-word;
+      }
+      #root, #__next {
+        isolation: isolate;
+      }
+      /* 初始化CSS */
+
       @font-face {
         font-family: 'Figtree-Italic';
         src: url('./assets/fonts/Figtree-Italic-VariableFont_wght.ttf') format(truetype);
+        font-display: swap;
       }
       @font-face {
         font-family: 'Figtree';
         src: url('./assets/fonts/Figtree-VariableFont_wght.ttf') format(truetype);
+        font-display: swap;
       }
       @font-face {
         font-family: 'Figtree-Bold';
         src: url('./assets/fonts/static/Figtree-ExtraBold.ttf') format(truetype);
+        font-display: swap;
       }
       @font-face {
         font-family: 'Figtree-SemiBold';
         src: url('./assets/fonts/static/Figtree-SemiBold.ttf') format(truetype);
+        font-display: swap;
       }
 
       body {
@@ -40,6 +71,7 @@
         justify-content: center;
         height: 100vh;
         background-color: #F4D04E;
+        /* margin: 0; */
       }
 
       .card {
@@ -47,72 +79,74 @@
         flex-direction: column;
         align-items: center;
         /* justify-content: center; */
-        width: 384px; height: 522px;
+        width: 24rem; height: 32.625rem;
         background-color: white;
-        border: 1px solid #111111;
-        border-radius: 20px;
-        box-shadow: 7px 7px #111111 ;
-        margin: 0px auto 20px;
+        border: 0.063rem solid #111111;
+        border-radius: 1.25rem;
+        box-shadow: 0.438rem 0.438rem #111111 ;
+        margin: 0px auto 1.25rem;
       }
 
       .blog-image {
-        margin: 24px;
+        margin: 1.5rem;
       }
       .blog-image img {
-        width: 336px; height: 200px;
-        border-radius: 10px;
+        width: 21rem; height: 12.5rem;
+        border-radius: 0.625rem;
       }
 
       .content {
-        width: 336px;
+        width: 21rem;
         text-align: left;
-        margin: 0px 24px 24px;
+        margin: 0 1.5rem 1.5rem;
       }
-      .content .learn {
-        width: 82px; height: 29px;
+      .content .learn p {
+        width: 5.125rem; height: 1.813rem;
         text-align: center;
-        line-height: 29px;
+        line-height: 1.813rem;
         background-color: #F4D04E;
-        font-size: 14px;
+        font-size: 0.875rem;
         font-family: 'Figtree-Bold';
-        border-radius: 4px;
+        border-radius: 0.25rem;
+        /* margin: 0; */
       }
-      .content .date {
-        height: 21px;
-        line-height: 21px;
-        margin: 12px auto;
-        font-size: 14px;
+      .content .date p {
+        height: 1.313rem;
+        line-height: 1.313rem;
+        margin: 0.75rem auto;
+        font-size: 0.875rem;
         font-family: 'Figtree-SemiBold';
       }
       .content .title {
-        font-size: 24px;
-        height: 36px;
-        line-height: 36px;
+        font-size: 1.5rem;
+        height: 2.25rem;
+        /* line-height: 36px; */
         font-family: 'Figtree-Bold';
-        margin: 0px auto 12px;
+        margin: 0 auto 0.75rem;
       }
       .content .description {
-        font-size: 16px;
-        height: 72px;
+        font-size: 1rem;
+        height: 4.5rem;
         font-family: 'Figtree';
         color: #6B6B6B;
+        /* margin: 0; */
       }
 
       .author {
         display: flex;
         flex-direction: row;
         align-items: center;
-        margin: 0 0 24px 0;
-        width: 336px; height: 32px;
+        margin: 0 0 1.5rem 0;
+        width: 21rem; height: 2rem;
       }
       .author img {
-        width: 40px; height: 40px;
-        border-radius: 50px;
+        width: 2.5rem; height: 2.5rem;
+        border-radius: 3.125rem;
       }
       .author .username {
-        font-size: 14px;
+        font-size: 0.875rem;
         font-family: 'Figtree-Bold';
-        margin: 0 0 0 12px;
+        margin: 0 0 0 0.75rem;
       }
 
       .attribution {
@@ -125,37 +159,37 @@
     </style>
   </head>
   <body>
-    <div class="card">
-      <div class="blog-image">
+    <article class="card">
+      <figure class="blog-image">
         <img src="./assets/images/illustration-article.svg" alt="Blog Image" />
-      </div>
+      </figure>
 
-      <div class="content">
-        <div class="learn">
-          Learning
-        </div>
+      <section class="content">
+        <span class="learn">
+          <p>Learning</p>
+        </span>
 
-        <div class="date">
-          Published 21 Dec 2023
-        </div>
+        <time class="date">
+          <p>Published 21 Dec 2023</p>
+        </time>
 
-        <div class="title">
+        <h1 class="title">
           HTML & CSS foundations
-        </div>
+        </h1>
 
-        <div class="description">
+        <p class="description">
             These languages are the backbone of every website, defining structure, content, and presentation.
-        </div>
-      </div>
+        </p>
+      </section>
 
-      <div class="author">
+      <footer class="author">
         <img src="./assets/images/S__17162243.jpg" alt="大頭照" />
 
-        <div class="username">
+        <span class="username">
           WeiHu, Ray
-        </div>
-      </div>
-    </div>
+        </span>
+      </footer>
+    </article>
 
     <div class="attribution">
       Challenge by
