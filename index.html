@@ -16,9 +16,10 @@
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <style>
-
       /* 初始化CSS */
-      *, *::before, *::after {
+      *,
+      *::before,
+      *::after {
         box-sizing: border-box;
       }
       * {
@@ -28,39 +29,55 @@
         line-height: 1.5;
         -webkit-font-smoothing: antialiased;
       }
-      img, picture, video, canvas, svg {
+      img,
+      picture,
+      video,
+      canvas,
+      svg {
         display: block;
         max-width: 100%;
       }
-      input, button, textarea, select {
+      input,
+      button,
+      textarea,
+      select {
         font: inherit;
       }
-      p, h1, h2, h3, h4, h5, h6 {
+      p,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
         overflow-wrap: break-word;
       }
-      #root, #__next {
+      #root,
+      #__next {
         isolation: isolate;
       }
       /* 初始化CSS */
 
       @font-face {
-        font-family: 'Figtree-Italic';
-        src: url('./assets/fonts/Figtree-Italic-VariableFont_wght.ttf') format(truetype);
+        font-family: "Figtree-Italic";
+        src: url("./assets/fonts/Figtree-Italic-VariableFont_wght.ttf")
+          format(truetype);
         font-display: swap;
       }
       @font-face {
-        font-family: 'Figtree';
-        src: url('./assets/fonts/Figtree-VariableFont_wght.ttf') format(truetype);
+        font-family: "Figtree";
+        src: url("./assets/fonts/Figtree-VariableFont_wght.ttf")
+          format(truetype);
         font-display: swap;
       }
       @font-face {
-        font-family: 'Figtree-Bold';
-        src: url('./assets/fonts/static/Figtree-ExtraBold.ttf') format(truetype);
+        font-family: "Figtree-Bold";
+        src: url("./assets/fonts/static/Figtree-ExtraBold.ttf") format(truetype);
         font-display: swap;
       }
       @font-face {
-        font-family: 'Figtree-SemiBold';
-        src: url('./assets/fonts/static/Figtree-SemiBold.ttf') format(truetype);
+        font-family: "Figtree-SemiBold";
+        src: url("./assets/fonts/static/Figtree-SemiBold.ttf") format(truetype);
         font-display: swap;
       }
 
@@ -70,7 +87,7 @@
         align-items: center;
         justify-content: center;
         height: 100vh;
-        background-color: #F4D04E;
+        background-color: #f4d04e;
         /* margin: 0; */
       }
 
@@ -79,11 +96,12 @@
         flex-direction: column;
         align-items: center;
         /* justify-content: center; */
-        width: 24rem; height: 32.625rem;
+        width: 24rem;
+        height: 32.625rem;
         background-color: white;
         border: 0.063rem solid #111111;
         border-radius: 1.25rem;
-        box-shadow: 0.438rem 0.438rem #111111 ;
+        box-shadow: 0.438rem 0.438rem #111111;
         margin: 0px auto 1.25rem;
       }
 
@@ -91,7 +109,8 @@
         margin: 1.5rem;
       }
       .blog-image img {
-        width: 21rem; height: 12.5rem;
+        width: 21rem;
+        height: 12.5rem;
         border-radius: 0.625rem;
       }
 
@@ -101,12 +120,13 @@
         margin: 0 1.5rem 1.5rem;
       }
       .content .learn p {
-        width: 5.125rem; height: 1.813rem;
+        width: 5.125rem;
+        height: 1.813rem;
         text-align: center;
         line-height: 1.813rem;
-        background-color: #F4D04E;
+        background-color: #f4d04e;
         font-size: 0.875rem;
-        font-family: 'Figtree-Bold';
+        font-family: "Figtree-Bold";
         border-radius: 0.25rem;
         /* margin: 0; */
       }
@@ -115,20 +135,20 @@
         line-height: 1.313rem;
         margin: 0.75rem auto;
         font-size: 0.875rem;
-        font-family: 'Figtree-SemiBold';
+        font-family: "Figtree-SemiBold";
       }
       .content .title {
         font-size: 1.5rem;
         height: 2.25rem;
         /* line-height: 36px; */
-        font-family: 'Figtree-Bold';
+        font-family: "Figtree-Bold";
         margin: 0 auto 0.75rem;
       }
       .content .description {
         font-size: 1rem;
         height: 4.5rem;
-        font-family: 'Figtree';
-        color: #6B6B6B;
+        font-family: "Figtree";
+        color: #6b6b6b;
         /* margin: 0; */
       }
 
@@ -137,15 +157,17 @@
         flex-direction: row;
         align-items: center;
         margin: 0 0 1.5rem 0;
-        width: 21rem; height: 2rem;
+        width: 21rem;
+        height: 2rem;
       }
       .author img {
-        width: 2.5rem; height: 2.5rem;
+        width: 2.5rem;
+        height: 2.5rem;
         border-radius: 3.125rem;
       }
       .author .username {
         font-size: 0.875rem;
-        font-family: 'Figtree-Bold';
+        font-family: "Figtree-Bold";
         margin: 0 0 0 0.75rem;
       }
 
@@ -173,21 +195,20 @@
           <p>Published 21 Dec 2023</p>
         </time>
 
-        <h1 class="title">
-          HTML & CSS foundations
-        </h1>
+        <h1 class="title">HTML & CSS foundations</h1>
 
         <p class="description">
-            These languages are the backbone of every website, defining structure, content, and presentation.
+          These languages are the backbone of every website, defining structure,
+          content, and presentation.
         </p>
       </section>
 
       <footer class="author">
         <img src="./assets/images/S__17162243.jpg" alt="大頭照" />
 
-        <span class="username">
-          WeiHu, Ray
-        </span>
+        <p class="username">
+          <span> WeiHu, Ray </span>
+        </p>
       </footer>
     </article>
 
